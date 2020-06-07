@@ -7,37 +7,73 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(        
-        backgroundColor: Colors.yellow,
+        backgroundColor: Colors.teal,
         body: SafeArea(
-          child: Row(
+          child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              Container(
-                width: 100.0,
-                color: Colors.red,
+              CircleAvatar(
+                radius: 50.0,
+                backgroundImage: AssetImage('assets/images/mayron_avatar.jpeg'),
               ),
-              Container(
-                width: 210.0,
-                color: Colors.teal,
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: <Widget>[
-                    Container(
-                      width: 100.0,
-                      height: 100.0,
-                      color: Colors.yellow,
-                    ),
-                    Container(
-                      width: 100.0,
-                      height: 100.0,
-                      color: Colors.green,
-                    ),
-                  ],
+              Text(
+                'Mayron Souza',
+                style: TextStyle(
+                  fontFamily: 'Pacifico',
+                  fontSize: 40.0,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.white,
                 ),
               ),
-              Container(
-                width: 100.0,
-                color: Colors.blue,
+              Text(
+                'Flutter Developer Stundent',
+                style: TextStyle(
+                  fontFamily: 'SourceSansPro',
+                  fontSize: 20.0,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.teal[100],
+                  letterSpacing: 2.5,
+                ),
+              ),
+              Card(
+                margin: EdgeInsets.symmetric(
+                  vertical: 10.0,
+                  horizontal: 25.0,
+                ),
+                child: ListTile(
+                  leading: Icon(
+                      Icons.phone,
+                      color: Colors.teal,
+                    ),
+                    title: Text(
+                      '+44 12 3456-7890',
+                      style: TextStyle(
+                        fontFamily: 'SourceSansPro',
+                        fontSize: 20.0,
+                        color: Colors.teal[900],
+                      ),
+                    ),
+                ),
+              ),
+              Card(
+                margin: EdgeInsets.symmetric(
+                  vertical: 10.0,
+                  horizontal: 25.0,
+                ),
+                child: ListTile(
+                  leading: Icon(
+                      Icons.email,
+                      color: Colors.teal,
+                    ),
+                  title: Text(
+                      'mayron@email.com',
+                      style: TextStyle(
+                        fontFamily: 'SourceSansPro',
+                        fontSize: 20.0,
+                        color: Colors.teal[900],
+                      ),
+                    ),
+                ),
               ),
             ],
           ),
@@ -46,3 +82,4 @@ class MyApp extends StatelessWidget {
     );
   }
 }
+
